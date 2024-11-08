@@ -1,4 +1,5 @@
 <div align="center">
+  <p><a href="https://pi-hole.net/"><img alt="pi-hole" src="../media/services/pihole-logo.svg" width="100px"/></a></p>
   <h1>Setup Pi-Hole Ad-Blocker</h1>
   <h4>The Open-Source Network-Wide Ad-Blocker</h4>
 </div>
