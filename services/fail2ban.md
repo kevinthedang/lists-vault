@@ -1,6 +1,6 @@
 <div align="center">
   <p><a href="https://github.com/fail2ban/fail2ban"><img alt="pi-hole" src="../media/services/fail2ban.png" width="200px"/></a></p>
-  <h1>Setup Fail2ban Framework</h1>
+  <h1>Setup Fail2Ban Framework</h1>
   <h4>The Open-Source Intrusion Prevention Software</h4>
 </div>
 
