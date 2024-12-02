@@ -76,4 +76,6 @@ sudo fail2ban-client unban <IP_ADDRESS>
 ```
 
 ## Customizing Fail2ban Client
-Coming Soon
+For now, you can just follow this [guide](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-20-04#step-2-configuring-fail2ban) from DigitalOcean.
+
+If the guide above becomes outdate or unavailable. Please create an issue to replace it/create instructions for it.
