@@ -1,5 +1,5 @@
 <div align="center">
-  <p><a href="https://www.java.com/en/"><img alt="java" src="../media/tools/java.png" width="150px"/></a></p>
+  <p><a href="https://www.java.com/en/"><img alt="java" src="../media/tools/java.png" width="200px"/></a></p>
   <h1>Java</h1>
   <h4>The Classic Class-Based, Object-Oriented Programming Language</h4>
 </div>
