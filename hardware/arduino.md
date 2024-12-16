@@ -7,6 +7,9 @@
 ### Overview
 Arduino is an open-source electronics platform that combines easy-to-use hardware and software. With its wide variety of microcontroller boards, it's perfect for prototyping and building interactive projects.
 
+### Examples!
+* [Night Light](./arduino/examples/night-light.md)
+
 ### Arduino Board Types
 * Arduino "Classic"
 * Arduino Nano
