@@ -13,9 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout PR branch
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -37,4 +38,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add README.md
           git diff --quiet --cached || git commit -m "Auto-update README (PR)"
-          git push
+          git push origin HEAD:${{ github.head_ref }}
