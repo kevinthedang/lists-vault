@@ -5,11 +5,16 @@
 ### List Directory
 
 #### Services
-* [Pi-Hole Network Ad-Blocker](./services/pi-hole.md)
-* [Fail2Ban Intrusion Prevention Software](./services/fail2ban.md)
+* [Fail2Ban](services/fail2ban.md)
+* [Pi Hole](services/pi-hole.md)
 
 #### Tools
-* [Java](./tools/java.md)
+* [Java](tools/java.md)
 
 #### Hardware
-* [Arduino](./hardware/arduino.md)
+* [Arduino](hardware/arduino.md)
+* Arduino
+  * [Arduino Classic](hardware/arduino/arduino-classic.md)
+  * Examples
+    * [Night Light](hardware/arduino/examples/night-light.md)
+
