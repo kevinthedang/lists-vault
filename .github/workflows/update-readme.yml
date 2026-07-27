@@ -10,7 +10,7 @@ on:
 
 jobs:
   generate-readme:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -25,7 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pathlib
+          pip install PyYAML pathlib
 
       - name: Generate README
         run: |
