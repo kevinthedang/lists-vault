@@ -63,7 +63,7 @@ def build_section(section):
 
     # Add in
     for item in entries:
-        line = f"* {item['path']}"
+        line = f"* [{item['title']}]({item['path']})"
         if item["description"]:
             line += f" — {item['description']}"
         md += line + "\n"
