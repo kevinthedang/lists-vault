@@ -21,7 +21,7 @@ HEADER = """<div align="center">
 def extract_metadata(md_path):
     """Extract title and description from markdown content."""
     with open(md_path, "r", encoding="utf-8") as f:
-        lines = [line.strip() for line in f.readlines()]
+        content = f.read()
 
     title = None
     description = ""
