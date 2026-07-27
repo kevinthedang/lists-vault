@@ -1,3 +1,8 @@
+---
+title: Pi-Hole
+description: DNS-based ad blocking and network-wide tracking protection.
+---
+
 <div align="center">
   <p><a href="https://pi-hole.net/"><img alt="pi-hole" src="../media/services/pihole-logo.svg" width="100px"/></a></p>
   <h1>Setup Pi-Hole Ad-Blocker</h1>

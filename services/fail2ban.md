@@ -1,3 +1,8 @@
+---
+title: Fail2ban
+description: Intrusion prevention tool that blocks IPs after repeated authentication failures.
+---
+
 <div align="center">
   <p><a href="https://github.com/fail2ban/fail2ban"><img alt="pi-hole" src="../media/services/fail2ban.png" width="200px"/></a></p>
   <h1>Setup Fail2Ban Framework</h1>
