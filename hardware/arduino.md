@@ -1,12 +1,7 @@
----
-title: Arduino
-description: Open-source electronics platform for building interactive hardware projects using microcontrollers.
----
-
 <div align="center">
   <p><a href="https://www.arduino.cc/"><img alt="arduino-icon" src="../media/hardware/arduino/arduino.svg" width="150px"/></a></p>
   <h1>Arduino</h1>
-  <h4>An Open-Source Electronics Platform</h4>
+  <h4>An Open-Source Electronics Platform for Hardware Projects with Microcontrollers</h4>
 </div>
 
 ### Overview
