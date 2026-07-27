@@ -9,10 +9,10 @@
 * [Pi-Hole](services/pi-hole.md) — DNS-based ad blocking and network-wide tracking protection.
 
 #### Tools
-* [Java](tools/java.md)
+* [Java](tools/java.md) — General-purpose, object-oriented programming language used for building cross-platform applications.
 
 #### Hardware
-* [Arduino](hardware/arduino.md)
+* [Arduino](hardware/arduino.md) — Open-source electronics platform for building interactive hardware projects using microcontrollers.
 * Arduino
   * [Arduino Classic](hardware/arduino/arduino-classic.md)
   * Examples
