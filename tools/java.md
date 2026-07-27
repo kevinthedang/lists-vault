@@ -1,3 +1,8 @@
+---
+title: Java
+description: General-purpose, object-oriented programming language used for building cross-platform applications.
+---
+
 <div align="center">
   <p><a href="https://www.java.com/en/"><img alt="java" src="../media/tools/java.png" width="200px"/></a></p>
   <h1>Java</h1>
