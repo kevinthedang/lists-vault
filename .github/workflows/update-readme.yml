@@ -19,6 +19,13 @@ jobs:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
 
+      - name: Skip if PR author is GitHub Actions bot
+        run: |
+          if [ "${{ github.event.pull_request.user.login }}" = "github-actions[bot]" ]; then
+            echo "Skipping because PR was created by the bot."
+            exit 0
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
