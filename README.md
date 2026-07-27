@@ -5,8 +5,8 @@
 ### List Directory
 
 #### Services
-* [Fail2Ban](services/fail2ban.md)
-* [Pi Hole](services/pi-hole.md)
+* [Fail2ban](services/fail2ban.md) — Intrusion prevention tool that blocks IPs after repeated authentication failures.
+* [Pi-Hole](services/pi-hole.md) — DNS-based ad blocking and network-wide tracking protection.
 
 #### Tools
 * [Java](tools/java.md)
