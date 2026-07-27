@@ -19,20 +19,27 @@ HEADER = """<div align="center">
 """
 
 def extract_metadata(md_path):
-    """Extract YAML front-matter metadata from a markdown file."""
+    """Extract title and description from markdown content."""
     with open(md_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    pattern = r"^---\s*\n(.*?)\n---\s*\n"
-    match = re.search(pattern, content, re.DOTALL)
+    title = None
+    description = ""
 
-    if not match:
-        return {}
+    # HTML headings
+    h1_match = re.search(r"<h1>(.*?)</h1>", content, re.IGNORECASE | re.DOTALL)
+    if h1_match:
+        title = h1_match.group(1).strip()
 
-    try:
-        return yaml.safe_load(match.group(1)) or {}
-    except Exception:
-        return {}
+    h4_match = re.search(r"<h4>(.*?)</h4>", content, re.IGNORECASE | re.DOTALL)
+    if h4_match:
+        description = h4_match.group(1).strip()
+
+
+    return {
+        "title": title,
+        "description": description or ""
+    }
 
 def build_section(section):
     section_path = ROOT / section

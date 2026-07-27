@@ -1,12 +1,7 @@
----
-title: Java
-description: General-purpose, object-oriented programming language used for building cross-platform applications.
----
-
 <div align="center">
   <p><a href="https://www.java.com/en/"><img alt="java" src="../media/tools/java.png" width="200px"/></a></p>
   <h1>Java</h1>
-  <h4>The Classic Class-Based, Object-Oriented Programming Language</h4>
+  <h4>The General-Purpose, Object-Oriented Programming Language</h4>
 </div>
 
 [Java](https://www.java.com/en/) is a class-based, object-oriented programming language that was first released by Sun Microsystems in 1995 and later acquired by Oracle Corporation.

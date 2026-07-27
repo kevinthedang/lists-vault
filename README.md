@@ -5,12 +5,12 @@
 ### List Directory
 
 #### Services
-* [Fail2ban](services/fail2ban.md) — Intrusion prevention tool that blocks IPs after repeated authentication failures.
-* [Pi-Hole](services/pi-hole.md) — DNS-based ad blocking and network-wide tracking protection.
+* [Fail2Ban](services/fail2ban.md) — The Open-Source Intrusion Prevention Software
+* [Pi-Hole](services/pi-hole.md) — The Open-Source Network-Wide DNS Sinkhole
 
 #### Tools
-* [Java](tools/java.md) — General-purpose, object-oriented programming language used for building cross-platform applications.
+* [Java](tools/java.md) — The General-Purpose, Object-Oriented Programming Language
 
 #### Hardware
-* [Arduino](hardware/arduino.md) — Open-source electronics platform for building interactive hardware projects using microcontrollers.
+* [Arduino](hardware/arduino.md) — An Open-Source Electronics Platform for Hardware Projects with Microcontrollers
 
