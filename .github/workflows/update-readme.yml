@@ -7,6 +7,7 @@ on:
     paths:
       - '**/*.md'
       - 'scripts/generate_readme.py'
+      - '**/*.yml'
 
 jobs:
   generate-readme:
