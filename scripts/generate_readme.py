@@ -34,74 +34,40 @@ def extract_metadata(md_path):
     except Exception:
         return {}
 
-def scan_nested(section_path):
-    """Recursively scan folders and return a nested structure."""
-    tree = {}
-
-    for root, dirs, files in os.walk(section_path):
-        rel_root = Path(root).relative_to(section_path)
-        current = tree
-
-        # Walk down the tree to the correct nested dict
-        for part in rel_root.parts:
-            current = current.setdefault(part, {})
-
-        # Add markdown files
-        md_files = [f for f in files if f.endswith(".md")]
-        entries = []
-
-        for file in md_files:
-            full_path = Path(root) / file
-            metadata = extract_metadata(full_path)
-
-            title = metadata.get("title", file.replace(".md", "").replace("-", " ").title())
-            description = metadata.get("description", "")
-
-            entries.append({
-                "title": title,
-                "description": description,
-                "path": full_path.relative_to(ROOT)
-            })
-
-        # Alphabetical sort by title
-        entries.sort(key=lambda x: x["title"].lower())
-
-        current["_files"] = entries
-
-    return tree
-
-def render_tree(tree, indent=0):
-    """Render nested folder structure into Markdown."""
-    md = ""
-    prefix = "  " * indent
-
-    # Render files first (alphabetical)
-    for item in tree.get("_files", []):
-        line = f"{prefix}* [{item['title']}]({item['path']})"
-        if item["description"]:
-            line += f" — {item['description']}"
-        md += line + "\n"
-
-    # Render subfolders (alphabetical)
-    subfolders = sorted(
-        (k for k in tree.keys() if k != "_files"),
-        key=lambda x: x.lower()
-    )
-
-    for key in subfolders:
-        md += f"{prefix}* {key.replace('-', ' ').title()}\n"
-        md += render_tree(tree[key], indent + 1)
-
-    return md
-
 def build_section(section):
     section_path = ROOT / section
     if not section_path.exists():
         return ""
 
-    tree = scan_nested(section_path)
     md = f"#### {section.capitalize()}\n"
-    md += render_tree(tree)
+    entries = []
+    
+    # Only scan markdown files directly in the section folder
+    for md_file in section_path.glob("*.md"):
+        metadata = extract_metadata(md_file)
+
+        title = metadata.get(
+            "title",
+            md_file.stem.replace("-", " ").title()
+        )
+        description = metadata.get("description", "")
+
+        entries.append({
+            "title": title,
+            "description": description,
+            "path": md_file.relative_to(ROOT)
+        })
+
+    # Sort alphabetically
+    entries.sort(key=lambda x: x["title"].lower())
+
+    # Add in
+    for item in entries:
+        line = f"* [{item['title']}]({item['path']})"
+        if item["description"]:
+            line += f" — {item['description']}"
+        md += line + "\n"
+
     md += "\n"
     return md
 

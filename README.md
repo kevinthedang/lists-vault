@@ -13,8 +13,4 @@
 
 #### Hardware
 * [Arduino](hardware/arduino.md) — Open-source electronics platform for building interactive hardware projects using microcontrollers.
-* Arduino
-  * [Arduino Classic](hardware/arduino/arduino-classic.md)
-  * Examples
-    * [Night Light](hardware/arduino/examples/night-light.md)
 
