@@ -62,7 +62,7 @@ def build_section(section):
     entries.sort(key=lambda x: x["title"].lower())
 
     # Add in
-    for items in entries:
+    for item in entries:
         line = f"* {item['path']}"
         if item["description"]:
             line += f" — {item['description']}"
