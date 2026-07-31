@@ -8,6 +8,13 @@
 [Github Repository](https://github.com/pi-hole/pi-hole)
 
 ### Methods of Installation
+
+> [!IMPORTANT]
+> Pi-Hole requires a static IP address for the device that is hosting this service. You should set this up through your router.
+
+> [!NOTE]
+> For users that utilize the Unifi Ecosystem you might have to restart the router on which it points it's DNS reference to.
+
 #### Automated Install
 This is the faster installation path. Use the following command:
 ```sh
