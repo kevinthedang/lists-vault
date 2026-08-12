@@ -24,7 +24,7 @@ You can follow the official [Docker Install](https://docs.docker.com/engine/inst
 
 2. Uninstall Old Docker
 
-```bash
+```sh
 sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc docker-buildx podman-docker containerd runc | cut -f1)
 ```
 
@@ -37,7 +37,7 @@ It's okay if it reports that none are installed.
 
 #### Setup Docker `apt` Repository
 
-```bash
+```sh
 # Add Docker's official GPG key:
 sudo apt update
 sudo apt install ca-certificates curl
@@ -48,8 +48,7 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 Then:
 
-```bash
-
+```sh
 # Add the repository to Apt sources:
 sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
 Types: deb
@@ -63,31 +62,31 @@ EOF
 
 Finally:
 
-```bash
+```sh
 sudo apt update
 ```
 
 #### Install Docker Packages
 
-```bash
+```sh
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
 4. Verify Docker Installation
 
-```bash
+```sh
 sudo systemctl status docker
 ```
 
 If it is not online:
 
-```bash
+```sh
 sudo systemctl start docker
 ```
 
 Run the following to test it out!
 
-```bash
+```sh
 sudo docker run hello-world
 ```
 
@@ -95,19 +94,19 @@ sudo docker run hello-world
 
 If the group `docker` does not exist:
 
-```bash
+```sh
 sudo groupadd docker
 ```
 
 Add your user to the group:
 
-```bash
+```sh
 sudo usermod -aG docker $USER
 ```
 
 Now logout and log in. Or do the following:
 
-```bash
+```sh
 newgrp docker
 ```
 
@@ -116,14 +115,14 @@ newgrp docker
 
 Run:
 
-```bash
+```sh
 docker run hello-world
 ```
 
 > [!NOTE]
 > **From the Docker Guide**: If you initially ran Docker CLI commands using sudo before adding your user to the docker group, you may see the following error:
 >
-> ```bash
+> ```sh
 > WARNING: Error loading config file: /home/user/.docker/config.json -
 > stat /home/user/.docker/config.json: permission denied
 > ```
@@ -131,7 +130,7 @@ docker run hello-world
 >
 > To fix this problem, either remove the ~/.docker/ directory (it's recreated automatically, but any custom settings are lost), or change its ownership and permissions using the following commands:
 >
-> ```bash
+> ```sh
 > sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 > sudo chmod g+rwx "$HOME/.docker" -R
 > ```
@@ -140,14 +139,14 @@ docker run hello-world
 
 Run:
 
-```bash
+```sh
 sudo systemctl enable docker.serivce
 sudo systemctl enable containerd.service
 ```
 
 To disable on startup:
 
-```bash
+```sh
 sudo systemctl disable docker.serivce
 sudo systemctl disable containerd.service
 ```
