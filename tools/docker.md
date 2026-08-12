@@ -9,7 +9,8 @@ Docker provides tools for working with AI across your development workflow. Each
 ### Install Docker Engine
 You can follow the official [Docker Install](https://docs.docker.com/engine/install/) walkthrough.
 
-1. For the most part, you can follow the walkthrough above. Make sure you follow the correct guide.
+> [!NOTE]
+> For the most part, you can follow the walkthrough above. Make sure you follow the correct guide.
 
 > [!NOTE]
 > For example, Linux Mint Cinnamon would be Ubuntu because it is a Ubuntu derivative. Not officially supported but may work.
@@ -22,7 +23,7 @@ You can follow the official [Docker Install](https://docs.docker.com/engine/inst
 > * If you use ufw or firewalld to manage firewall settings, be aware that when you expose container ports using Docker, these ports bypass your firewall rules. For more information, refer to [Docker and ufw](https://docs.docker.com/engine/network/packet-filtering-firewalls/#docker-and-ufw).
 > * Docker is only compatible with iptables-nft and iptables-legacy. Firewall rules created with nft are not supported on a system with Docker installed. Make sure that any firewall rulesets you use are created with iptables or ip6tables, and that you add them to the DOCKER-USER chain, see [Packet filtering and firewalls](https://docs.docker.com/engine/network/packet-filtering-firewalls/).
 
-2. Uninstall Old Docker
+### Uninstall Old Docker
 
 ```sh
 sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc docker-buildx podman-docker containerd runc | cut -f1)
@@ -33,7 +34,7 @@ It's okay if it reports that none are installed.
 > [!NOTE]
 > Images, containers, volumes, and networks stored in `/var/lib/docker/` aren't automatically removed when you uninstall Docker. If you want to start with a clean installation, and prefer to clean up any existing data, read the [uninstall Docker Engine](https://docs.docker.com/engine/install/ubuntu/#uninstall-docker-engine) section.
 
-3. Install using Docker's `apt` repository
+### Install using Docker's `apt` repository
 
 #### Setup Docker `apt` Repository
 
@@ -72,7 +73,7 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-4. Verify Docker Installation
+### Verify Docker Installation
 
 ```sh
 sudo systemctl status docker
@@ -90,7 +91,7 @@ Run the following to test it out!
 sudo docker run hello-world
 ```
 
-5. Run Docker as non-root User
+### Run Docker as non-root User
 
 If the group `docker` does not exist:
 
@@ -135,7 +136,7 @@ docker run hello-world
 > sudo chmod g+rwx "$HOME/.docker" -R
 > ```
 
-6. Enable Docker on Startup
+### Enable Docker on Startup
 
 Run:
 
