@@ -17,20 +17,20 @@ If you would like documentation for something please submit an [issue](https://g
 2. Create a new Markdown file in the corresponding directory.
 
 > [!NOTE]
-> Sample File Structure
-> lists-vault/
-> ├── hardware/
-> │   └── arduino.md
-> ├── services/
-> │   ├── fail2ban.md
-> │   └── pi-hole.md
-> ├── tools/
-> │   └── java.md
-> └── README.md
+> Sample File Structure  
+> lists-vault/  
+> ├── hardware/  
+> │   └── arduino.md  
+> ├── services/  
+> │   ├── fail2ban.md  
+> │   └── pi-hole.md  
+> ├── tools/  
+> │   └── java.md  
+> └── README.md  
 
 3. Use a descriptive file name (ex. `pi-hole.md` for PiHole)
 
-> ![NOTE]
+> [!NOTE]
 > Ensure the filename is always lowercase and uses hyphens
 
 4. Header of the file should look like the following
@@ -43,7 +43,7 @@ If you would like documentation for something please submit an [issue](https://g
 </div>
 ```
 
-> ![NOTE]
+> [!NOTE]
 > Keep descriptions concise. For example for PiHole:
 > DNS-based ad blocking and network-wide tracking protection."
 
@@ -72,5 +72,5 @@ Document any required configuration.
 ...
 ```
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > There is no need to edit `README.md` as it is auto-generated in Pull Requests prior to merging into the Default branch.
