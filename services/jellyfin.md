@@ -1,7 +1,7 @@
 <div align="center">
   <p><a href="https://pi-hole.net/"><img alt="pi-hole" src="../media/services/jellyfin.png" width="100px"/></a></p>
   <h1>Jellyfin</h1>
-  <h4>Free Free Software Media System</h4>
+  <h4>The Free Software Media System</h4>
 </div>
 
 * [Jellyfin](https://jellyfin.org/) is an Free Software Media System. You can also download it from the url provided.
