@@ -6,7 +6,7 @@
 
 #### Services
 * [Fail2Ban](services/fail2ban.md) — The Open-Source Intrusion Prevention Software
-* [Jellyfin](services/jellyfin.md) — Free Free Software Media System
+* [Jellyfin](services/jellyfin.md) — The Free Software Media System
 * [Pi-Hole](services/pi-hole.md) — The Open-Source Network-Wide DNS Sinkhole
 
 #### Tools
