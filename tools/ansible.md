@@ -49,3 +49,62 @@ ansible [core 2.14.6]
     jinja version = 3.1.2
     libyaml = True
 ```
+
+### Basic Inventory
+Ansible uses an inventory file (list of servers) to communicate with the servers.
+
+1. Create a host file
+
+```sh
+mkdir test-project
+cd test-project
+touch hosts.ini
+```
+
+2. Go into the `hosts.ini` file (vim, nano, whatever) and put the following:
+
+```
+[example]
+www.example.com
+```
+
+where `example` is the group of servers you are managing and `www.example.com` is the domain name (or IP address) of a server in that group. If not using port 22 for SSH on a server, you need to add it to ther address, like `www.example.com:2222` since Ansible with default to port 22 and will not get this from the ssh config file.
+
+For example in your home network:
+
+```
+[pi-cluster]
+192.168.0.20
+192.168.0.21
+192.168.0.22
+192.168.0.23
+```
+
+### First Ad-Hoc Ansible Command
+Ansible is installed and we have an inventory file. Let's run a command to see if everything works!
+
+1. Enter the following command (something safe for now):
+
+```sh
+ansible -i hosts.ini example -m ping -u [username]
+```
+
+`[username]` us the user you would use to log into the server. If everything works you should see a message that shows `www.example.com | SUCCESS >>`, then the result of the ping. If it does not work, run it again with `-vvvv` at the end to see a verbose output. Possible issue is that the SSH keys are not properly configured. if you can ssh with `ssh username@www.example.com` then it should work!
+
+> [!NOTE]
+> Ansible assumes passworless (key-based) login for SSH. You can use passwords using `--ask-pass` but this is not recommended.
+
+2. Let's run a more useful command
+
+```sh
+ansible -i hosts.ini example -a "free -h" -u [username]
+```
+
+This example will just show memory usage that is human readable for all servers in this `example` group. Commands like these are great for servers that are behaving out of the "normal" way.
+
+### Summary
+That is the basics for now. We got:
+
+1. Ansible installed
+2. Basic inventory to tell it about your servers
+3. Ran a couple commands through Ansible.
