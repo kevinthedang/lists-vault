@@ -13,6 +13,7 @@
 * [Ansible](tools/ansible.md) — Open Source Automation System
 * [Docker](tools/docker.md) — Package and Run Application in Lightweight Containers
 * [Java](tools/java.md) — The General-Purpose, Object-Oriented Programming Language
+* [Network UPS Tools](tools/nut.md) — Monitor, Control, and Coordinate Your UPS
 
 #### Hardware
 * [Arduino](hardware/arduino.md) — An Open-Source Electronics Platform for Hardware Projects with Microcontrollers
