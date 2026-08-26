@@ -6,6 +6,9 @@
 
 Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain.
 
+I have a separate [Ansible List](https://github.com/kevinthedang/ansible-list) repository for more ansible learning.
+It will show how I learn using Ansible at home.
+
 * [Ansible Docs](https://docs.ansible.com/)
 * [Ansible Repository](https://github.com/ansible/ansible)
 * [Ansible for DevOps](https://github.com/geerlingguy/ansible-for-devops) by [Jeff Geerling](https://github.com/geerlingguy)
