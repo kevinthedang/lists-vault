@@ -73,7 +73,7 @@ models:
     defaultCompletionOptions:
       contextLength: 16384
 
-  # Code explanations, edits, and applying changes
+  # Code explanations, edits, and applying changes - Agent
   - name: Qwen2.5 Coder 7B
     provider: ollama
     model: qwen2.5-coder:7b
@@ -82,6 +82,8 @@ models:
       - chat
       - edit
       - apply
+    capabilities:
+      - tool_use
     defaultCompletionOptions:
       contextLength: 16384
 
