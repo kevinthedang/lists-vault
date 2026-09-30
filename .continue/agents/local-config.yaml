@@ -1,0 +1,17 @@
+name: Local - AI
+version: 0.0.1
+schema: v1
+
+models:
+  - name: Gemma Agent
+    provider: ollama
+    model: gemma4:e2b
+    apiBase: http://localhost:11434
+    roles:
+      - chat
+      - edit
+      - apply
+    capabilities:
+      - tool_use
+    defaultCompletionOptions:
+      contextLength: 16384
