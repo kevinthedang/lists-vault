@@ -54,5 +54,47 @@ models:
       contextLength: 16384
 ```
 
+Example with multiple models pulled from Ollama:
+
+```yml
+name: Local Ollama Setup
+version: 0.0.1
+schema: v1
+
+models:
+  # Normal conversation
+  - name: Qwen3 4B Chat
+    provider: ollama
+    model: qwen3:4b
+    apiBase: http://localhost:11434
+    roles:
+      - chat
+    defaultCompletionOptions:
+      contextLength: 16384
+
+  # Code explanations, edits, and applying changes
+  - name: Qwen2.5 Coder 7B
+    provider: ollama
+    model: qwen2.5-coder:7b
+    apiBase: http://localhost:11434
+    roles:
+      - chat
+      - edit
+      - apply
+    defaultCompletionOptions:
+      contextLength: 16384
+
+  # Inline Tab completion
+  - name: Qwen2.5 Coder 1.5B Autocomplete
+    provider: ollama
+    model: qwen2.5-coder:1.5b
+    apiBase: http://localhost:11434
+    roles:
+      - autocomplete
+    autocompleteOptions:
+      maxPromptTokens: 1024
+      debounceDelay: 250
+```
+
 ## Extra
 * Continue can also be used in Jetbrains IDEs or simply via the CLI
