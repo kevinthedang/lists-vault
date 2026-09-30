@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Continue</h1>
-  <h4>Open Source VSCode Agent Extension</h4>
+  <h4>Open Source Coding Agent</h4>
 </div>
 
 ## Introduction to Continue
