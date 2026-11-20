@@ -11,10 +11,10 @@
 
 #### Tools
 * [Ansible](tools/ansible.md) — Open Source Automation System
-* [Continue](tools/continue.md) — Open Source Coding Agent
 * [Docker](tools/docker.md) — Package and Run Application in Lightweight Containers
 * [Java](tools/java.md) — The General-Purpose, Object-Oriented Programming Language
 * [Network UPS Tools](tools/nut.md) — Monitor, Control, and Coordinate Your UPS
+* [OpenCode](tools/opencode.md) — Open-Source Coding Agent
 
 #### Hardware
 * [Arduino](hardware/arduino.md) — An Open-Source Electronics Platform for Hardware Projects with Microcontrollers
